@@ -52,7 +52,7 @@ src/
 Cloner le projet :
 
 ```bash
-git clone <url-du-repo>
+git clone https://github.com/DevMelaine/spacex-dashboard-tp4-tp5.git
 cd spacex-dashboard
 
 Installer les dépendances :
