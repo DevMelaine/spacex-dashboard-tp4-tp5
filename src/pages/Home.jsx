@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Home() {
 
@@ -24,18 +25,20 @@ function Home() {
     fetchMissions();
   }, []);
 
-  if (loading) return <p>Chargement...</p>;
+  if (loading) return <p>Chargement...</p>; 
   if (error) return <p>{error}</p>;
 
   return (
     <div>
-      <h1>Dernières Missions SpaceX</h1>
+      <h1>Liste des missions</h1>
 
       {missions.map((mission) => (
-        <div key={mission.id}>
-          <h3>{mission.name}</h3>
-        </div>
-      ))}
+  <div key={mission.id}>
+    <Link to={`/mission/${mission.id}`}>
+      <h3>{mission.name}</h3>
+    </Link>
+  </div>
+))}
     </div>
   );
 }
