@@ -1,16 +1,99 @@
-# React + Vite
+# 🚀 SpaceX Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Application web développée avec React permettant d'explorer les lancements SpaceX via leur API publique.
 
-Currently, two official plugins are available:
+Ce projet a été réalisé dans le cadre des TP4 & TP5 du module "Développement Web Client Riche".
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📌 Objectifs du Projet
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Implémenter un système de routing avec React Router
+- Consommer une API REST (SpaceX API)
+- Gérer les états (loading, error)
+- Implémenter le Lazy Loading
+- Ajouter des tests unitaires avec Vitest
+- Générer un build de production optimisé
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Utilisées
+
+- React
+- Vite
+- React Router DOM
+- Axios
+- Vitest
+- Testing Library
+
+---
+
+## 🏗️ Architecture du Projet
+
+src/
+│
+├── pages/
+│ ├── Home.jsx
+│ └── MissionDetail.jsx
+│
+├── components/
+│
+├── tests/
+│ └── Home.test.jsx
+│
+├── App.jsx
+└── main.jsx
+
+
+---
+
+## ⚙️ Installation
+
+Cloner le projet :
+
+```bash
+git clone <url-du-repo>
+cd spacex-dashboard
+
+Installer les dépendances :
+npm install
+
+Lancer le projet en développement:
+npm run dev
+
+# Lancer les tests:
+npm run test
+
+# Générer le build de production:
+npm run build
+
+# Prévisualiser le build :
+npm run preview
+
+# Fonctionnalités Implémentées
+
+- Affichage des 10 derniers lancements SpaceX
+
+- Navigation vers une page détail dynamique
+
+- Gestion des états de chargement et d’erreur
+
+- Lazy loading des pages
+
+- Test unitaire sur la page Home
+
+- Build optimisé pour production
+
+# API Utilisée:
+SpaceX REST API
+https://api.spacexdata.com/v4/launches
+
+#Auteur
+
+Projet réalisé dans le cadre d’un travail académique par:
+- TCHAKPI Pato Kibalo Mélaine (Lead technique)
+- N'TCHA Darius (Developpeur de la page missionDetail)
+
+# Licence
+
+Projet académique – usage pédagogique.
