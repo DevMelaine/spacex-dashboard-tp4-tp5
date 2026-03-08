@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
+import AlertSystem from "../Components/AlertSystem";
 
 function MissionDetail() {
   const { id } = useParams();
-  console.log("ID reçu :", id);
 
   const [mission, setMission] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -61,22 +61,22 @@ function MissionDetail() {
 
   if (loading) return <p>Chargement...</p>;
   if (error) {
-  return (
-    <div>
-      <h2>Mission non trouvée</h2>
-      <Link to="/">Retour à l'accueil</Link>
-    </div>
-  );
-}
+    return <AlertSystem message={error} type="error" />;
+  }
 
   return (
-    <div>
+    <div className="card mission-detail">
       <h2>{mission.name}</h2>
       <p>{mission.details}</p>
 
       {mission.links?.patch?.small && (
         <img src={mission.links.patch.small} alt={mission.name} />
       )}
+      <p>
+        <Link to="/" className="back-link">
+          ← Retour à la liste
+        </Link>
+      </p>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import AlertSystem from "../Components/AlertSystem";
 
 function Home() {
 
@@ -26,19 +27,20 @@ function Home() {
   }, []);
 
   if (loading) return <p>Chargement...</p>; 
-  if (error) return <p>{error}</p>;
+  if (error) return <AlertSystem message={error} type="error" />;
 
   return (
     <div>
       <h1>Liste des missions</h1>
-
-      {missions.map((mission) => (
-  <div key={mission.id}>
-    <Link to={`/mission/${mission.id}`}>
-      <h3>{mission.name}</h3>
-    </Link>
-  </div>
-))}
+      <div className="missions">
+        {missions.map((mission) => (
+          <div key={mission.id} className="card">
+            <Link to={`/mission/${mission.id}`}>
+              <h3>{mission.name}</h3>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

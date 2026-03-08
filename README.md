@@ -2,6 +2,14 @@
 
 Application web développée avec React permettant d'explorer les lancements SpaceX via leur API publique.
 
+**Le projet a été stylisé pour ressembler à un portfolio professionnel :**
+- En-tête et pied de page réutilisables
+- Layout centralisé avec conteneur responsive
+- Cartes avec ombres, typographie soignée et palette de couleurs modernes
+- Police Google Fonts (Roboto) intégrée
+
+Ce projet peut donc servir de vitrine front-end pour votre travail.
+
 Ce projet a été réalisé dans le cadre des TP4 & TP5 du module "Développement Web Client Riche".
 
 ---
